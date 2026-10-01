@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="grid-head">
+    <div>Тип аудитории</div>
+    <div>Время записи</div>
+    <div>Дата и время записи</div>
+    <div>Статус зявки</div>
+</div>
+
+{% for zayavka in zayavki %}
+<div class="grid-list">
+    <div>{{zayavka.type}}</div>
+    <div>{{zayavka.datetime}}</div>
+    <div>{{zayavka.payment}}</div>
+    <div>{{zayavka.status}}</div>
+</div>
+{% endfor %}
+{% endblock content%}

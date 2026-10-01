@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content%}
+<h1>Регистрация</h1>
+<form method="POST" class="form">
+    {% csrf_token %}
+    {{form}}
+    <button>Зарегистрироваться</button>
+</form>
+{% endblock content%}
